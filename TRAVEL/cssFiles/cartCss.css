@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+   background-position: relative;
+    background:url("../media/flat-lay-yellow-luggage-with-copy-space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    /* background-color: rgb(231, 213, 46); */
+}
+section{
+  display: flex;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 35px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b1b1ae;
+  border-radius: 15px;
+}
+
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+/* header .logo:hover{
+
+  font-size: 22px;
+  letter-spacing: 2px;
+  position: relative;
+} */
+
+header .search
+{
+    position: relative;
+    padding-top: 5px;
+    margin-left: 100px;
+    /* transform: translate(-50%, -50%); */
+    background: rgb(18, 170, 124);
+    height: 60px;
+    padding: 10px;
+    border-radius:40px ;
+}
+header .search:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+header .search:hover > .search-btn{
+    background: white;
+}
+header .search-btn{
+    color: coral;
+    float: right;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    background: rgb(95, 240, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-weight: 400;
+}
+
+header .search-txt
+{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: 40px;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    width: 0px;
+}
+header .search-txt::placeholder{
+    color: white;
+}
+
+header ul li{
+    list-style: none;
+    display: inline-flex;
+    margin-right: 40px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: itim;
+
+}
+header ul li a:hover{
+  border-bottom:2px solid #ebeb0f; 
+}
+
+.head {
+    margin-top: 80px;
+    width:30%;
+    margin-left: 40%;
+    align-items: center;
+    display: flex;
+}
+.head  i{
+    color: rgba(255, 143, 15, 1);
+    font-size: 60px;
+    border-bottom: 5px solid #b1b1ae;
+    margin-left: 80px;
+}
+.head h2{
+    font-family: itim;
+    font-size: 55px;
+    border-bottom: 5px solid #b1b1ae;
+    color: rgba(255, 143, 15, 1);
+}
+.main-area{
+    position: absolute;
+    top:180px;
+    left:60px;
+    width: 90%;
+    height: 70%;
+    border-radius: 50px;
+    background: rgba(0,0,0,0.15);
+  
+}
+.main-area h2{
+    text-align: center;
+    background-color:rgba(255, 143, 15, 0.8); 
+    border-radius: 50px;
+    font-size: 35px;
+    color: #fff;
+    padding: 8px 0;
+    font-family: itim;
+}
+.main-area #cartData1{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+}
+
+.head .btn{
+      position: absolute;
+      top: 100px;
+      right: 250px;
+      width: 120px;
+      height: 40px;
+      background-color: blue;
+      border-radius: 10px;
+} 
+.head .btn:hover{
+  border: 2px solid rgba(255, 143, 15, 0.8); 
+}
+.head .btn span{
+   color: #fff;
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.head  #priceBx{
+  border-radius: 10px;
+  position:absolute;
+  top: 100px;
+  height: 40px;
+  right: 50px;
+  background: #fff;
+  width: 150px;
+  border: 2px solid rgba(255, 143, 15, 0.8); 
+
+
+}
+
+
+@media(max-width : 991px){
+       header ul li{
+           margin-right: 20px;
+       }
+
+      header ul li:last-child{
+          margin-right: 0;
+      }
+
+      header{ 
+          width: 90.5%;
+          margin-left: 5%;
+          margin-top: 10px;
+      }
+      section .main-area{
+        left:40px;
+      }
+   
+}
+
+@media(max-width : 840px){
+  body{
+
+    background: rgb(231, 229, 229);
+  }
+  header{
+      background: #fff;
+  }
+  header .logo{
+      color: rgba(255, 143, 15, 1);
+  }
+  header .menu-toggle{
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+      right: 20px;
+     
+    
+      float: right;
+      cursor: pointer;
+      font-size: 30px;
+
+      text-align: center;
+      color: rgb(223, 59, 59);
+  }
+  
+  header .menu-toggle:before{
+      content: '\f0c9';
+      font-family: fontAwesome;
+      line-height: 40px;
+  }
+  header .menu-toggle.active:before{
+      content: '\f00d';
+  }
+
+  header nav{
+      display: none;
+  }
+  .container{
+      z-index: 20;
+  }
+  header nav.active{
+      
+      position: absolute;
+      display: block;
+      width: 98%;
+      background-color:rgb(240, 173, 173);;
+      border-radius: 5px;
+      top:100px;
+      right:8px;
+      z-index: 1000;
+      
+  }
+  header nav.active ul{
+      display: block;
+      text-align: center;
+      margin:10px 20px;
+      margin-left: 10px;
+  }
+  header nav.active ul li{
+      width: 100%;
+      margin: 10px 40px;
+      height: 40px;
+  }
+  header nav.active ul li a{
+      font-size: 28px;
+      color:#fff ;
+      margin-left: 36%;
+  }
+  header nav.active ul li:hover{
+      background: #fff;
+   
+      width: 90%;
+      border-radius: 15px;
+      border-bottom:4px solid #ebeb0f;
+
+      margin-left: 40px;
+  }
+  header nav.active ul li:hover a{
+      color: #2ce9ba;
+      margin-left: 40%;
+  }
+  .head{
+    margin-left: 10%;
+    width: 50%;
+  }
+  .head h2{
+    font-size: 40px;
+    margin-left: 0;
+    padding-left: 5%;
+    width: 60%;
+  }
+  .head i{
+    font-size: 40px;
+    margin-left: 5px;
+    margin-top: 8px;
+  }
+  
+  .head  #priceBx{
+    top:130px;
+  }
+  .head .btn{
+    top: 80px;
+    right: 65px;
+  }
+}
+
+@media (max-width : 600px){
+ 
+  .main-area{
+   margin-right: 20px;
+    width: 90%;
+  }
+  
+  .main-area h2{
+    font-size: 30px;
+  }
+  
+  .head h2{
+    font-size: 28px;
+    width:70%;
+  }
+  .head i{
+    
+    font-size: 28px;
+    margin-right: 5px;
+  }
+  .head .btn{
+    top:120px;
+    right:50px;
+    width: 100px;
+    height: 30px;
+  }
+  .head #priceBx{
+    top:83px;
+    right: 40px;
+    width: 120px;
+    height: 30px;
+  }
+  .head .btn span{
+    
+    font-size: 15px;
+  }
+}
